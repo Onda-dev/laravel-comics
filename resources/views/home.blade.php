@@ -1,9 +1,18 @@
 @extends('layouts.base')
 
 @section('page-title')
-    Home Page
+
 @endsection
 
 @section('page-content')
-    Contenuto
+    <section>
+        <ul>
+            @foreach ($comics as $comic)
+                <li>
+                    <img src="{{$comic['thumb']}}" alt="">
+                    <h3>{{$comic['title']}}</h3>
+                </li>
+            @endforeach
+        </ul>
+    </section>
 @endsection
